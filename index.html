@@ -47,8 +47,19 @@
     <p>
       If you want to highlight strings programatically, create your own highlighter, parse a source code 
       string and modify its tokens, derive a tool from this library or anything else, you may want to check
-      the <a href="/"><strong>Github Repository and Docs</strong></a>.
+      the <a href="https://github.com/felippe-regazio/unilight"><strong>Github Repository and Docs</strong></a>.
     </p>
+
+    <h2>Warning</h2>
+
+    <p>This is a toy project and it was made for aesthetics only. Some of the cavets of a unicode highlighter are:</p>
+
+    <ol>      
+      <li>Environments that does not support unicode can show a broken text</li>
+      <li>Since unicode variations are basically hidden chars, the String may be bigger then it looks</li>
+      <li>Interpreters Wont run the code because of the keywords will not be recognized </li>
+      <li>The unicode caracters may vary from one system to another    </li>
+    </ol>
 
     <br>
 

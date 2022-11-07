@@ -278,7 +278,7 @@ Just open the `keywords.js` file on the project root, add a new property with th
 
 ## Cavets
 
-This is a toy projects and it was made for aesthetics only. Some of the cavets of a unicode highlighter are:
+This is a toy project and it was made for aesthetics only. Some of the cavets of a unicode highlighter are:
 
 1. Environments that does not support unicode can show a broken text
 2. Since unicode variations are basically hidden chars, the String may be bigger then it looks

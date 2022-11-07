@@ -1,7 +1,7 @@
 {
   "name": "unilight",
   "version": "1.0.0",
-  "description": "Unicode Highlighter",
+  "description": "Unicode text highlighter",
   "main": "./dist/index.js",
   "directories": {
     "test": "tests"
