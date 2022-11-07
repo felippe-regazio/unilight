@@ -18,7 +18,7 @@ Unilight is a unicode string highlighter. It uses `unicode variations` to highli
 
 ## Basic Usage
 
-> If you want to simply highlight a code string to use it anywhere, you can use the GUI tool available in this link: https://test.com
+> If you want to simply highlight a code string to use it anywhere, you can use the GUI tool available in this link: https://felippe-regazio.github.io/unilight/
 
 If you want to highlight strings programatically, create your own highlighter, parse a source code string and modify its tokens, derive a tool from this library or anything else, keep reading this documentation.
 
