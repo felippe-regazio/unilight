@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    html, body {
+      background-color: #eee;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 0 10px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .editor {
+      margin: 16px 0;
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      height: 400px;
+      max-height: 300px;
+      white-space: pre-wrap;
+      overflow: auto;
+    }
+  </style>
+  
+  <title>Unilight - Unicode Highlighter</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Unilight</h1>
+
+    <p>
+      Unilight is a unicode highlighter: that means pure string code Highlighting for almost any languague.
+      It uses unicode variations, making possible to highlighted raw strings for any output that suports 
+      unicode and its variations, for almoast any language. Useful to post code where there is no supoort
+      for rich editor or native highlighting.
+    </p>
+
+    <p>
+      If you want to highlight strings programatically, create your own highlighter, parse a source code 
+      string and modify its tokens, derive a tool from this library or anything else, you may want to check
+      the <a href="/"><strong>Github Repository and Docs</strong></a>.
+    </p>
+
+    <br>
+
+    <!-- --------------- EDITOR --------------- -->
+
+    <main>
+      <h2>Unicode Highlighter</h2>
+
+      <form action="/">
+        <label>
+          Language:
+          <select name="language"></select>
+        </label>
+      </form>
+      
+      <div class="editor" id="input" contentEditable role="textbox" tabindex="-1">
+// This is an example
+
+function example() {
+  const a = "fizz";
+  const b = "buzz";
+  return a+b;
+}
+      </div>
+
+      <p>Output:</p>
+  
+      <div class="editor" id="output" data-output role="textbox">
+        <!-- output automatically goes here -->
+      </div>
+    </main>
+
+    <p>Unilight was written by <a href="https://felipperegazio.com"><strong>Felippe Regazio</strong></a></p>
+  </div>
+
+  <script src="./dist/index.js"></script>
+  <script src="./keywords.js"></script>
+  
+  <script>
+    // language selector behavior
+    const langSelect = document.querySelector('select[name=language]');
+
+    Object.keys(KEYWORDS_LIST).forEach(lang => {
+      const option = Object.assign(document.createElement('option'), {
+        value: lang,
+        selected: lang === 'javascript',
+        textContent: lang[0].toUpperCase()+lang.substring(1)
+      });
+
+      langSelect.append(option);
+    });
+
+    langSelect.onchange = () => convert();
+  </script>
+
+  <script>
+    // editor behavior
+    function convert() {
+      const language = document.querySelector('select[name=language]').value;
+      const input = document.getElementById('input').innerText;
+      const result = unilight.highlight(input, KEYWORDS_LIST[language]);
+      document.getElementById('output').innerText = result;
+    }
+
+    document.getElementById('input').oninput = () => convert();
+    convert();
+  </script>
+</body>
+</html>

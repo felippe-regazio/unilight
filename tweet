@@ -1,0 +1,29 @@
+// 𝔽𝕚𝕫 𝕦𝕞𝕒 𝕗𝕖𝕣𝕣𝕒𝕞𝕖𝕟𝕥𝕒 𝕡𝕣𝕒 𝕔𝕠𝕕𝕖 𝕙𝕚𝕘𝕙𝕝𝕚𝕘𝕙𝕥 𝕟𝕠 𝕥𝕨𝕚𝕥𝕥𝕖𝕣
+// 𝕊𝕖𝕣𝕧𝕖 𝕡𝕣𝕒 𝕢𝕦𝕒𝕝𝕢𝕦𝕖𝕣 𝕝𝕒𝕟𝕘. 𝔻𝕖𝕥𝕒𝕝𝕙𝕖𝕤 𝕟𝕒 𝕥𝕙𝕣𝕖𝕒𝕕 🧶
+
+𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 test() {
+  𝗰𝗼𝗻𝘀𝘁 a = "fizz";
+  𝗰𝗼𝗻𝘀𝘁 b = "buzz";
+  𝗿𝗲𝘁𝘂𝗿𝗻 a+b;
+}
+
+---
+
+A ferramenta chama-se "Unilight". Consiste em um parser universal e um modulo que modifica a variação unicode de partes da string.
+
+Assim vc pode fazer highlight de código em qualquer lugar que não aceite rich editing, basta ter uma string pura que aceita variações unicode.
+
+---
+
+Existem 2 downsides nessa tecnica: 
+
+1. O caractere unicode pode variar entre browsers ou sistemas operacionais.
+
+2. A string vai ficar maior do que parece, pois modificadores unicode são tbm chars invisíveis. Assim, isso pode ser um problema em lugares que tem limitação, como tt
+
+---
+
+Dito isso, uma vez que o output tenha suporte pra unicode, vc pode gerar códigos com highlighting em string pura no link abaixo:
+
+---
+

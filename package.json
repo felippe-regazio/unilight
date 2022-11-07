@@ -1,0 +1,27 @@
+{
+  "name": "unilight",
+  "version": "1.0.0",
+  "description": "Unicode Highlighter",
+  "main": "./dist/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node ./tests/main.js",
+    "start": "npm run build && npx live-server .",
+    "build": "parcel build ./src/index.js --global unilight && npm run test"
+  },
+  "keywords": [
+    "unicode",
+    "highlighter",
+    "raw",
+    "string",
+    "parser",
+    "highlight"
+  ],
+  "author": "Felippe Regazio",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
