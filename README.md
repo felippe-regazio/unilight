@@ -276,6 +276,15 @@ This file is used by the GUI Editor (index.html) to serve different collections 
 
 Just open the `keywords.js` file on the project root, add a new property with the language name you want to add, and an array of strings containing each keyword you want to be highlighted.
 
+## Cavets
+
+This is a toy projects and it was made for aesthetics only. Some of the cavets of a unicode highlighter are:
+
+1. Environments that does not support unicode can show a broken text
+2. Since unicode variations are basically hidden chars, the String may be bigger then it looks
+3. Interpreters Wont run the code because of the keywords will not be recognized 
+4. The unicode caracters may vary from one system to another
+
 ## Credits
 
 Unilight was written by Felippe Regazio.
