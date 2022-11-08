@@ -69,7 +69,7 @@ The output will be:
 
 ## Structure
 
-Unilight is structured in 3 different modules: the `parser`, the `formatter` and `unilight` itself:
+Unilight is structured in 3 different modules: the `parser`, the `formatter` and the `highlighter`:
 
 ### The Parser
 
