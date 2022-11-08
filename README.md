@@ -1,6 +1,6 @@
 # Unilight
 
-Unilight is a unicode string highlighter. It uses `unicode variations` to highlight raw strings for almoast any programming language. The output can be used anywhere that accepts unicode chars. Unilight has no dependencies, e.g.
+Unilight is a unicode string highlighter. It uses `unicode variations` to highlight raw strings for almost any programming language. The output can be used anywhere that accepts unicode chars. Unilight has no dependencies, e.g.
 
 ```
 /**
@@ -30,7 +30,7 @@ First install the unilight as a dependency
 npm install unilight
 ```
 
-Now require or import `unilight` (or just the `highlight` method). Then call the `highlight` method passing a collection of keywords to be highlighted. Styles for comments, strings and ponctuation will be automatically infered:
+Then require or import `unilight` (or just the `highlight` method). Call the `highlight` method passing a collection of keywords to be highlighted. Styles for comments, strings and ponctuation will be automatically inferred:
 
 ```js
 const { highlight } = require('unilight');
@@ -73,7 +73,7 @@ Unilight is structured in 3 different modules: the `parser`, the `formatter` and
 
 ### The Parser
 
-The parser can parse almost any source code in any language. It receives a string input, a keyword list and some formatting callbackss. It will parse the source code string and run a callback to every diffent kind of token found. For each token types there will be a `formatting callback` which you can use to modify the token output. Unilight will identify 5 different token types:
+The parser can parse almost any source code in any language. It receives a string input, a keyword list and some formatting callbacks. It will parse the source code string and run a callback for every diffent kind of token found. For each token type there will be a `formatting callback` which you can use to modify the token output. Unilight will identify 5 different token types:
 
 - Neutral (no formatting)
 - Keyword
@@ -236,7 +236,7 @@ const output = customHighlighter(`
 `);
 ```
 
-The code above will find tokens and sorround them with a `span` identified by a custom class depending on the token type. You can use this classes style the output on an HTML page.
+The code above will find tokens and surround them with a `span` identified by a custom class depending on the token type. You can use this class to style the output on an HTML page.
 
 ## Developing
 
@@ -276,14 +276,14 @@ This file is used by the GUI Editor (index.html) to serve different collections 
 
 Just open the `keywords.js` file on the project root, add a new property with the language name you want to add, and an array of strings containing each keyword you want to be highlighted.
 
-## Cavets
+## Caveats
 
-This is a toy project and it was made for aesthetics only. Some of the cavets of a unicode highlighter are:
+This is a toy project and it was made for aesthetics only. Some of the caveats of a unicode highlighter are:
 
-1. Environments that does not support unicode can show a broken text
-2. Since unicode variations are basically hidden chars, the String may be bigger then it looks
-3. Interpreters Wont run the code because of the keywords will not be recognized 
-4. The unicode caracters may vary from one system to another
+1. Environments that don't support unicode can show a broken text
+2. Since unicode variations are basically hidden chars, the resulting string may be longer than it looks
+3. Interpreters won't run the code because the keywords will not be recognized
+4. The unicode characters may vary from one system to another
 
 ## Credits
 
@@ -291,4 +291,4 @@ Unilight was written by Felippe Regazio.
 
 Special thanks to David Konrad, which created the module `Unicode Variations` that can modify a unicode string and apply new variations. This is used by Unilight to highlight the string.
 
-Special thanks to Helios (ASVD) that created Microlight Highlighter. His `parsing techiniques` where a strong inspiration and direct reference to Unilight parser, which uses part of his code.
+Special thanks to Helios (ASVD) that created Microlight Highlighter. His `parsing techiniques` were a strong inspiration and direct reference to Unilight parser, which uses part of his code.
